@@ -449,3 +449,113 @@ import Foundation
 //    print("The string does not contain any special characters")
 //}
 
+ //MARK: - 26. FizzBuzz Question
+
+for number in 1...1000 {
+    if number % 3 == 0 && number % 5 == 0 {
+        print("FizzBuzz")
+    } else if number % 3 == 0 {
+        print("Fizz")
+    } else if number % 5 == 0 {
+        print("Buzz")
+    } else {
+        print(number)
+    }
+}
+
+ //MARK: - 26. write a function 'function' taht takes in two integers as in out perameters. it should also taken in another function as a parameter and this function should swap the values of the two integers passed, finally 'function' should return two strings "var1 is now \(Var1)" and "Var2 is now \(var2)" in swift
+func function1(var1: Int, var2: Int, swapping: (inout Int, inout Int) -> Void)  -> (String, String) {
+    var a = var1
+    var b = var2
+    swap(&a, &b)
+    return ("var1 is \(a)", "var2 is \(b)")
+}
+
+func swapping(a: inout Int, b: inout Int) {
+    let temp = a
+    a = b
+    b = temp
+}
+
+let output = function1(var1: 1, var2: 2, swapping: swapping)
+print(output.0)
+print(output.1)
+
+ //MARK: - 27. create a structur with a stored property 'number' and a computed property 'numberSquared' which is computed as the square of the stored property. Also declare a getter and setter for 'numberSquared'. the structure also contains a read cubes the stored property
+struct MyStruct {
+    var number: Int
+    var numberSquared: Int {
+        get {
+            return number * number
+        }
+        set {
+            number = Int(sqrt(Double(newValue)))
+        }
+    }
+    var numberCubed: Int {
+        get {
+            return number * number * number
+        }
+    }
+}
+
+let obj1 = MyStruct(number: 2)
+
+print(obj1.number)
+print(obj1.numberSquared)
+print(obj1.numberCubed)
+
+ //MARK: - 28. Define an enumeration for a traffic signal. the signal must cycle between three diffrent states (red, yellow and green) every time it's next() method is called
+enum Traffic {
+    case red
+    case yellow
+    case green
+
+    mutating func next() {
+        switch self {
+        case .red:
+            self = .yellow
+        case .yellow:
+            self = .green
+        case .green:
+            self = .red
+        }
+    }
+}
+
+var signal = Traffic.red
+print(signal)
+
+signal.next()
+print(signal)
+
+signal.next()
+print(signal)
+
+ //MARK: - 29. create a class called VendingMachine. it must contain an array of strings called 'items' as a stored property. it must also contain a function 'getitem' which takes a string and compares it to the item is present, it should print 'Here you go!' or else it should throw a custom error ' itemNotAvailable'
+class VendingMachine {
+    var items: [String]
+
+    init(items: [String]) {
+        self.items = items
+    }
+
+    func getItem(_ item: String) throws {
+        guard items.contains(item) else {
+            throw VendingMachineError.itemNotAvailable
+        }
+        print("Here you go!")
+    }
+}
+
+enum VendingMachineError: Error {
+    case itemNotAvailable
+}
+
+let myVendingMachine = VendingMachine(items: ["Coke", "Pepsi", "Water"])
+try myVendingMachine.getItem("Coke")
+do {
+    try myVendingMachine.getItem("Sprite")
+} catch {
+    print(error)
+}
