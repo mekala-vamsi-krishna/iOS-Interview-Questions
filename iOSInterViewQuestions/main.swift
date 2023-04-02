@@ -449,10 +449,3 @@ import Foundation
 //    print("The string does not contain any special characters")
 //}
 
-let string = "Hello, world! #"
-let specialChars = CharacterSet(charactersIn: "!@#$%^&*()_+=[]{}|;',./:?><")
-if let _ = string.rangeOfCharacter(from: specialChars){
-    print("The string contains at least one special character")
-} else {
-    print("The string does not contain any special characters")
-}
