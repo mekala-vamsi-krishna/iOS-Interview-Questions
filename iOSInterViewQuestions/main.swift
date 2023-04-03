@@ -562,11 +562,22 @@ import Foundation
 
  //MARK: - 30. Reverse the String
 
-func reverseString(word: String) -> String {
-    var reversedString = ""
-    for char in word {
-        reversedString = "\(char)\(reversedString)"
+//func reverseString(word: String) -> String {
+//    var reversedString = ""
+//    for char in word {
+//        reversedString = "\(char)\(reversedString)"
+//    }
+//    return reversedString
+//}
+//print(reverseString(word: "anhsirK ismaV alakeM"))
+
+ //MARK: - 31. Uppercase the first letter of a string
+
+func uppercase(the word: String) -> String {
+    var outputString = ""
+    if let firstLetter = word.first {
+        outputString = String(firstLetter).uppercased() + String(word.dropFirst())
     }
-    return reversedString
+    return outputString
 }
-print(reverseString(word: "anhsirK ismaV alakeM"))
+print(uppercase(the: "mekala vamsi krishna"))
