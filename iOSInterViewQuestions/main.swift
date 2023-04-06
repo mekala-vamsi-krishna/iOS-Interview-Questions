@@ -573,11 +573,30 @@ import Foundation
 
  //MARK: - 31. Uppercase the first letter of a string
 
-func uppercase(the word: String) -> String {
-    var outputString = ""
-    if let firstLetter = word.first {
-        outputString = String(firstLetter).uppercased() + String(word.dropFirst())
+//func uppercase(the word: String) -> String {
+//    var outputString = ""
+//    if let firstLetter = word.first {
+//        outputString = String(firstLetter).uppercased() + String(word.dropFirst())
+//    }
+//    return outputString
+//}
+//print(uppercase(the: "mekala vamsi krishna"))
+
+ //MARK: 32. Write a function that takes a string as input and returns the first non-repeating character in the string. If there are no non-repeating characters, return nil.
+
+func firstNonRepeatingChar(s: String) -> Character? {
+    var charCount = [Character: Int]()
+    
+    for char in s {
+        charCount[char, default: 0] += 1
     }
-    return outputString
+    
+    for char in s {
+        if charCount[char] == 1 {
+            return char
+        }
+    }
+    
+    return nil
 }
-print(uppercase(the: "mekala vamsi krishna"))
+print(firstNonRepeatingChar(s: "Verdict"))
