@@ -584,19 +584,34 @@ import Foundation
 
  //MARK: 32. Write a function that takes a string as input and returns the first non-repeating character in the string. If there are no non-repeating characters, return nil.
 
-func firstNonRepeatingChar(s: String) -> Character? {
-    var charCount = [Character: Int]()
-    
-    for char in s {
-        charCount[char, default: 0] += 1
-    }
-    
-    for char in s {
-        if charCount[char] == 1 {
-            return char
+//func firstNonRepeatingChar(s: String) -> Character? {
+//    var charCount = [Character: Int]()
+//
+//    for char in s {
+//        charCount[char, default: 0] += 1
+//    }
+//
+//    for char in s {
+//        if charCount[char] == 1 {
+//            return char
+//        }
+//    }
+//
+//    return nil
+//}
+//print(firstNonRepeatingChar(s: "Verdict"))
+
+ //MARK: Find the index of the given key from an array
+
+var key = 20
+
+func linearSearch(_ array: [Int], key: Int) -> Int? {
+    for (index, element) in array.enumerated() {
+        if element == key {
+            print("The index of \(key) is \(index)")
+            return index
         }
     }
-    
     return nil
 }
-print(firstNonRepeatingChar(s: "Verdict"))
+print(linearSearch([10, 30, 40, 20, 50, 60], key: 20))
