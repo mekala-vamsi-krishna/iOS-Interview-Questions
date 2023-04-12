@@ -601,17 +601,32 @@ import Foundation
 //}
 //print(firstNonRepeatingChar(s: "Verdict"))
 
- //MARK: Find the index of the given key from an array
+ //MARK: 33. Find the index of the given key from an array
 
-var key = 20
+//var key = 20
+//
+//func linearSearch(_ array: [Int], key: Int) -> Int? {
+//    for (index, element) in array.enumerated() {
+//        if element == key {
+//            print("The index of \(key) is \(index)")
+//            return index
+//        }
+//    }
+//    return nil
+//}
+//print(linearSearch([10, 30, 40, 20, 50, 60], key: 20))
 
-func linearSearch(_ array: [Int], key: Int) -> Int? {
-    for (index, element) in array.enumerated() {
-        if element == key {
-            print("The index of \(key) is \(index)")
-            return index
-        }
-    }
-    return nil
+ //MARK: 34. Adding 2 to each and every element in an array by using for in loop (Don't use Map Function)
+
+var array = [2, 4, 7, 9, 3, 5]
+var newArray = [Int]()
+
+for i in array {
+    newArray.append(i + 2)
 }
-print(linearSearch([10, 30, 40, 20, 50, 60], key: 20))
+
+print(newArray)
+
+// using Map function
+
+print(array.map({$0 + 2}))
