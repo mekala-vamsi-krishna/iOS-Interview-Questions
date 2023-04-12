@@ -573,11 +573,60 @@ import Foundation
 
  //MARK: - 31. Uppercase the first letter of a string
 
-func uppercase(the word: String) -> String {
-    var outputString = ""
-    if let firstLetter = word.first {
-        outputString = String(firstLetter).uppercased() + String(word.dropFirst())
-    }
-    return outputString
+//func uppercase(the word: String) -> String {
+//    var outputString = ""
+//    if let firstLetter = word.first {
+//        outputString = String(firstLetter).uppercased() + String(word.dropFirst())
+//    }
+//    return outputString
+//}
+//print(uppercase(the: "mekala vamsi krishna"))
+
+ //MARK: 32. Write a function that takes a string as input and returns the first non-repeating character in the string. If there are no non-repeating characters, return nil.
+
+//func firstNonRepeatingChar(s: String) -> Character? {
+//    var charCount = [Character: Int]()
+//
+//    for char in s {
+//        charCount[char, default: 0] += 1
+//    }
+//
+//    for char in s {
+//        if charCount[char] == 1 {
+//            return char
+//        }
+//    }
+//
+//    return nil
+//}
+//print(firstNonRepeatingChar(s: "Verdict"))
+
+ //MARK: 33. Find the index of the given key from an array
+
+//var key = 20
+//
+//func linearSearch(_ array: [Int], key: Int) -> Int? {
+//    for (index, element) in array.enumerated() {
+//        if element == key {
+//            print("The index of \(key) is \(index)")
+//            return index
+//        }
+//    }
+//    return nil
+//}
+//print(linearSearch([10, 30, 40, 20, 50, 60], key: 20))
+
+ //MARK: 34. Adding 2 to each and every element in an array by using for in loop (Don't use Map Function)
+
+var array = [2, 4, 7, 9, 3, 5]
+var newArray = [Int]()
+
+for i in array {
+    newArray.append(i + 2)
 }
-print(uppercase(the: "mekala vamsi krishna"))
+
+print(newArray)
+
+// using Map function
+
+print(array.map({$0 + 2}))
