@@ -618,15 +618,66 @@ import Foundation
 
  //MARK: 34. Adding 2 to each and every element in an array by using for in loop (Don't use Map Function)
 
-var array = [2, 4, 7, 9, 3, 5]
-var newArray = [Int]()
+//var array = [2, 4, 7, 9, 3, 5]
+//var newArray = [Int]()
+//
+//for i in array {
+//    newArray.append(i + 2)
+//}
+//
+//print(newArray)
+//
+//// using Map function
+//
+//print(array.map({$0 + 2}))
 
-for i in array {
-    newArray.append(i + 2)
+ //MARK: Reverse an Array
+
+func reversTheArray(_ name: String) -> String {
+    var reversedName = ""
+    for letter in name {
+        reversedName = "\(letter)\(reversedName)"
+    }
+    return reversedName
 }
 
-print(newArray)
+print(reversTheArray("Mekala Vamsi Krishna"))
 
-// using Map function
+func reverseArray<T>(_ array: [T]) -> [T] {
+    var reversedArray = array
+    var first = 0
+    var last = array.count - 1
+    
+    while first < last {
+        reversedArray.swapAt(first, last)
+        first += 1
+        last -= 1
+    }
+    return reversedArray
+}
 
-print(array.map({$0 + 2}))
+print(reverseArray(["vamsi", "Rakesh", "Raji", "Mohan"]))
+
+func reverse<T>(_ numbers: inout [T]) -> [T] {
+    var reverseNumbers = [T]()
+    while numbers.count > 0 {
+        reverseNumbers.append(numbers.removeLast())
+    }
+    return reverseNumbers
+}
+
+var array = ["Vamsi", "Raki", "Raji", "Mohan"]
+print(reverse(&array))
+
+
+func rotateArray<T>(_ array: [T], byPositions positions: Int) -> [T] {
+    var rotatedArray = array
+    for _ in 0 ..< positions {
+        let firstElement = rotatedArray.removeFirst()
+        rotatedArray.append(firstElement)
+    }
+    return rotatedArray
+}
+let numbers = [1, 2, 3, 4, 5]
+let rotatedNumbers = rotateArray(numbers, byPositions: 2)
+print(rotatedNumbers)
