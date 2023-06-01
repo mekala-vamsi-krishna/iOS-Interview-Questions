@@ -633,51 +633,91 @@ import Foundation
 
  //MARK: Reverse an Array
 
-func reversTheArray(_ name: String) -> String {
-    var reversedName = ""
-    for letter in name {
-        reversedName = "\(letter)\(reversedName)"
-    }
-    return reversedName
-}
+//func reversTheArray(_ name: String) -> String {
+//    var reversedName = ""
+//    for letter in name {
+//        reversedName = "\(letter)\(reversedName)"
+//    }
+//    return reversedName
+//}
+//
+//print(reversTheArray("Mekala Vamsi Krishna"))
+//
+//func reverseArray<T>(_ array: [T]) -> [T] {
+//    var reversedArray = array
+//    var first = 0
+//    var last = array.count - 1
+//
+//    while first < last {
+//        reversedArray.swapAt(first, last)
+//        first += 1
+//        last -= 1
+//    }
+//    return reversedArray
+//}
+//
+//print(reverseArray(["vamsi", "Rakesh", "Raji", "Mohan"]))
+//
+//func reverse<T>(_ numbers: inout [T]) -> [T] {
+//    var reverseNumbers = [T]()
+//    while numbers.count > 0 {
+//        reverseNumbers.append(numbers.removeLast())
+//    }
+//    return reverseNumbers
+//}
+//
+//var array = ["Vamsi", "Raki", "Raji", "Mohan"]
+//print(reverse(&array))
+//
+//
+//func rotateArray<T>(_ array: [T], byPositions positions: Int) -> [T] {
+//    var rotatedArray = array
+//    for _ in 0 ..< positions {
+//        let firstElement = rotatedArray.removeFirst()
+//        rotatedArray.append(firstElement)
+//    }
+//    return rotatedArray
+//}
+//let numbers = [1, 2, 3, 4, 5]
+//let rotatedNumbers = rotateArray(numbers, byPositions: 2)
+//print(rotatedNumbers)
 
-print(reversTheArray("Mekala Vamsi Krishna"))
+//func rearrangeArray<T>(_ array: [T], fromIndex: Int, toIndex: Int) -> [T] {
+//    var rearrangedArray = array
+//    let element = rearrangedArray.remove(at: fromIndex)
+//    rearrangedArray.insert(element, at: toIndex)
+//    return rearrangedArray
+//}
+//
+//let numbersArray = [1, 2, 3, 4, 5, 6]
+//print(rearrangeArray(numbersArray, fromIndex: 0, toIndex: 5))
 
-func reverseArray<T>(_ array: [T]) -> [T] {
-    var reversedArray = array
-    var first = 0
-    var last = array.count - 1
-    
-    while first < last {
-        reversedArray.swapAt(first, last)
-        first += 1
-        last -= 1
-    }
-    return reversedArray
-}
+ //MARK: Higher Order Functions
 
-print(reverseArray(["vamsi", "Rakesh", "Raji", "Mohan"]))
+ //MARK: Map
 
-func reverse<T>(_ numbers: inout [T]) -> [T] {
-    var reverseNumbers = [T]()
-    while numbers.count > 0 {
-        reverseNumbers.append(numbers.removeLast())
-    }
-    return reverseNumbers
-}
-
-var array = ["Vamsi", "Raki", "Raji", "Mohan"]
-print(reverse(&array))
-
-
-func rotateArray<T>(_ array: [T], byPositions positions: Int) -> [T] {
-    var rotatedArray = array
-    for _ in 0 ..< positions {
-        let firstElement = rotatedArray.removeFirst()
-        rotatedArray.append(firstElement)
-    }
-    return rotatedArray
-}
 let numbers = [1, 2, 3, 4, 5]
-let rotatedNumbers = rotateArray(numbers, byPositions: 2)
-print(rotatedNumbers)
+let squaredNumbers = numbers.map { number1 in
+    number1 * number1
+}
+print(squaredNumbers)
+
+ //MARK: Compact Map
+let strings = ["1", "2", "3", "4", "Five"]
+let convertedStrings = strings.compactMap({
+    Int($0)
+})
+print(convertedStrings)
+
+ //MARK: flat Map
+let flatmapNumbers = [1, 2, 3, 4, 5]
+let nestedArrays = numbers.map {Array(repeating: $0, count: $0)}
+let flattenedArray = flatmapNumbers.flatMap { Array(repeating: $0, count: $0) }
+print(flattenedArray)
+
+ //MARK: Reduce
+let reduceNumbers = [1, 2, 3, 4, 5]
+let newReduceArray = reduceNumbers.reduce(0, {
+    $0 + $1
+})
+print(newReduceArray)
