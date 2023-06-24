@@ -7,218 +7,69 @@
 
 import Foundation
 
- //MARK: - Largest number from an Array
+let object = Problems()
 
-//var numbers = [1, 5, 3, 7, 9, 25, 50, 90]
-//
-//var largestNumber = 0
-//
-//for number in numbers {
-//    if (number > largestNumber) {
-//        largestNumber = number
-//    }
-//}
-//
-//print(largestNumber)
+//MARK: - Largest number from an Array
+print(object.largestNumberInArray(array: [1, 27, 3, 4, 5, 6, 21]))
 
  //MARK: - 1. Write a Swift program to compute the sum of the two integers. If the values are equal return the triple their sum
-
-//func add(a: Int, b: Int) -> Int{
-//    if a == b {
-//        return (a + b) * 3
-//    } else {
-//        return a + b
-//    }
-//}
-//
-//print(add(a: 20, b: 20))
+print(object.add(a: 3, b: 3))
 
  //MARK: - 2. Write a Swift program to compute and return the absolute difference of n and 51, if n is over 51 return double the absolute difference
-
-//func diff(n: Int) -> Int {
-//    if n > 51 {
-//        return (n - 51) * 2
-//    } else {
-//        return 51 - n
-//    }
-//}
-//
-//print(diff(n: 91))
+let obj2 = Problems()
+print(object.diff(n: 23))
 
  //MARK: - 3. Write a Swift program that accept two integer values and return true if one of them is 20 or if their sum is 20.
-
-//func bool(a: Int, b: Int) -> Bool {
-//    if a == 20 || b == 20 || (a + b) == 20 {
-//        return true
-//    } else {
-//        return false
-//    }
-//}
-//
-//print(bool(a: 10, b: 10))
+print(object.bool1(a: 10, b: 10))
 
  //MARK: - 4. Write a Swift program to accept two integer values and return true if one is negative and one is positive. Return true only if both are negative.
-
-//func bool(a: Int, b: Int) -> Bool {
-//    if a < 0 && b > 0 {
-//        return true
-//    } else if a > 0 && b < 0 {
-//        return true
-//    } else if a < 0 && b < 0 {
-//        return true
-//    } else {
-//        return false
-//    }
-//}
-//
-//print(bool(a: 8, b: 8))
+print(object.bool2(a: 8, b: 8))
 
  //MARK: - Write a Swift program to add "Is" to the front of a given string. However, if the string already begins with "Is", return the given string.
-
-//func str(word: String) -> String {
-//    if word.hasPrefix("Is") == true {
-//        return word
-//    } else {
-//        return "Is \(word)"
-//    }
-//}
-//
-//print(str(word: "Is it you?"))
+print(object.str(word: "Is it you?"))
 
  //MARK: - 6. Write a Swift program to remove a character at specified index of a given non-empty string. The value of the specified index will be in the range 0..str.length()-1 inclusive.
-
-//func removeStr(word: String, n: Int) -> String {
-//    var newWord = word
-//    let index = word.index(word.startIndex, offsetBy: n)
-//
-//    if word.count > 0 {
-//        newWord.remove(at: index)
-//    }
-//
-//    return newWord
-//}
-//
-//print(removeStr(word: "Rakesh", n: 4))
+print(object.removeStr(word: "Rakesh", n: 4))
 
  //MARK: - 7. Write a Swift program to change the first and last character of a given string.
-
-//func first_last(str1: String) -> String {
-//    var result = str1
-//    let first_char = result.remove(at: result.startIndex)
-//    let findLast = result.index(before: result.endIndex)
-//    let last_char = result.remove(at: findLast)
-//
-//    result.append(first_char)
-//    result.insert(last_char, at: (result.startIndex))
-//
-//    return result
-//}
-//
-//
-//print(first_last(str1: "Vamsi"))
+print(object.first_last(str1: "Vamsi"))
 
  //MARK: - 8. Write a Swift program to add the last character (given string) at the front and back of a given string. The length of the given string must be 1 or more.
-
-//func addChar(name: String) -> String {
-//        var word = name
-//
-//        var lastChar = word.removeLast()
-//        var lastStr = String(lastChar)
-//
-//        return lastStr + name + lastStr
-//}
-//
-//print(addChar(name: "Vamsi"))
-
+print(object.addChar(name: "Vamsi"))
 
  //MARK: - 9. Fibonacci Series
-//
-//func fibonacciSeries(num: Int) -> Int {
-//    var n1 = 0
-//    var n2 = 1
-//
-//    var nR = 0
-//
-//    for _ in 0..<num {
-//        nR = n1
-//        n1 = n2
-//        n2 = nR + n2
-//    }
-//
-//    return n1
-//}
-//let result1 = fibonacciSeries(num: 2)
-//print(result1)
+print(object.fibonacciSeries(num: 8))
 
 // MARK: - 10. Factorial Code
-
-//func factorial(fact: Int) -> Int {
-//
-//    if fact == 0 {
-//        return 1
-//    } else {
-//        return fact * factorial(fact: fact - 1)
-//    }
-//}
-//
-//let result2 = factorial(fact: 5)
-//print(result2)
+print(object.factorial(fact: 5))
 
 // MARK: - 11. Armstrong number
-
-//func armstrong(num: Int) -> String {
-//    var number = num
-//    var sum = 0
-//    var rem = 0
-//
-//    while(number > 0) {
-//        rem = number % 10
-//        sum = sum + (rem * rem * rem)
-//        number /= 10
-//
-//        if (sum > num) { break }
-//    }
-//
-//    if (num == sum) {
-//        return "Armstrong"
-//    }
-//
-//    return "Non Armstrong"
-//}
-//
-//let result3 = armstrong(num: 729)
-//print(result3)
+print(object.armstrong(num: 729))
 
 // MARK: - 12. Sum of two numbers
-
-//func sum(n1: Int, n2: Int) -> Int {
-//    return n1 + n2
-//}
-//
-//let result = sum(n1: 2, n2: 3)
-//print(result)
+print(object.sum(n1: 2, n2: 3))
 
  //MARK: - 13. Calculate buckets of paint needed
 
-//var width: Float = 3.4
-//var height: Float = 2.1
-//
-//var bucketsOfPaint: Int {
-//    get {
-//        let area = width * height
-//        let areaCoveredPerBucket: Float = 1.5
-//        let numberOfBuckets = area / areaCoveredPerBucket
-//        let roundedBuckets = ceilf(numberOfBuckets)
-//        return Int(roundedBuckets)
-//    }
-//    set {
-//        let areaCanCover = Double(newValue) * 1.5
-//        print(areaCanCover)
-//    }
-//}
-//
-//print(bucketsOfPaint)
-//bucketsOfPaint = 10
+var width: Float = 3.4
+var height: Float = 2.1
+
+var bucketsOfPaint: Int {
+    get {
+        let area = width * height
+        let areaCoveredPerBucket: Float = 1.5
+        let numberOfBuckets = area / areaCoveredPerBucket
+        let roundedBuckets = ceilf(numberOfBuckets)
+        return Int(roundedBuckets)
+    }
+    set {
+        let areaCanCover = Double(newValue) * 1.5
+        print(areaCanCover)
+    }
+}
+
+print(bucketsOfPaint)
+bucketsOfPaint = 10
 
  //MARK: - 14. Getting numbers from a string
 
@@ -696,28 +547,31 @@ import Foundation
 
  //MARK: Map
 
-let numbers = [1, 2, 3, 4, 5]
-let squaredNumbers = numbers.map { number1 in
-    number1 * number1
-}
-print(squaredNumbers)
+//let numbers = [1, 2, 3, 4, 5]
+//let squaredNumbers = numbers.map { number1 in
+//    number1 * number1
+//}
+//print(squaredNumbers)
+//
+// //MARK: Compact Map
+//let strings = ["1", "2", "3", "4", "Five"]
+//let convertedStrings = strings.compactMap({
+//    Int($0)
+//})
+//print(convertedStrings)
+//
+// //MARK: flat Map
+//let flatmapNumbers = [1, 2, 3, 4, 5]
+//let nestedArrays = numbers.map {Array(repeating: $0, count: $0)}
+//let flattenedArray = flatmapNumbers.flatMap { Array(repeating: $0, count: $0) }
+//print(flattenedArray)
+//
+// //MARK: Reduce
+//let reduceNumbers = [1, 2, 3, 4, 5]
+//let newReduceArray = reduceNumbers.reduce(0, {
+//    $0 + $1
+//})
+//print(newReduceArray)
 
- //MARK: Compact Map
-let strings = ["1", "2", "3", "4", "Five"]
-let convertedStrings = strings.compactMap({
-    Int($0)
-})
-print(convertedStrings)
-
- //MARK: flat Map
-let flatmapNumbers = [1, 2, 3, 4, 5]
-let nestedArrays = numbers.map {Array(repeating: $0, count: $0)}
-let flattenedArray = flatmapNumbers.flatMap { Array(repeating: $0, count: $0) }
-print(flattenedArray)
-
- //MARK: Reduce
-let reduceNumbers = [1, 2, 3, 4, 5]
-let newReduceArray = reduceNumbers.reduce(0, {
-    $0 + $1
-})
-print(newReduceArray)
+let reverseArray = Problems()
+print(reverseArray.reverseArray(a: [1,2,3]))

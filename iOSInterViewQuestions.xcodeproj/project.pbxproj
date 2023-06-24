@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15166A8729CF44420070B1EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15166A8629CF44420070B1EA /* main.swift */; };
+		ACFE8CE22A479EE9006F5166 /* Problems.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE8CE12A479EE9006F5166 /* Problems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		15166A8329CF44420070B1EA /* iOSInterViewQuestions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iOSInterViewQuestions; sourceTree = BUILT_PRODUCTS_DIR; };
 		15166A8629CF44420070B1EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		ACFE8CE12A479EE9006F5166 /* Problems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				15166A8629CF44420070B1EA /* main.swift */,
+				ACFE8CE12A479EE9006F5166 /* Problems.swift */,
 			);
 			path = iOSInterViewQuestions;
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFE8CE22A479EE9006F5166 /* Problems.swift in Sources */,
 				15166A8729CF44420070B1EA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
