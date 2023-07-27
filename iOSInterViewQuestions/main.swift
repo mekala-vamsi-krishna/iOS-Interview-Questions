@@ -406,9 +406,12 @@ let nestedArrays = numbers.map {Array(repeating: $0, count: $0 ?? 0)}
 let flattenedArray = flatmapNumbers.flatMap { Array(repeating: $0, count: $0) }
 print(flattenedArray)
 
-// //MARK: Reduce
+ //MARK: Reduce
 let reduceNumbers = [1, 2, 3, 4, 5]
 let newReduceArray = reduceNumbers.reduce(0, {
     $0 + $1
 })
 print(newReduceArray)
+
+//MARK: Generate Password
+print(object.generatePassword(length: 8))
