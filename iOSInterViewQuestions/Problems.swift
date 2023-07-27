@@ -293,14 +293,13 @@ class Problems {
         return reversedArray
     }
     
-    func generatePassword(length: Int) {
-        let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+    func generatePassword(length: Int) -> String {
+        let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+=-{}[];,./?"
         var password = ""
         
         for _ in 0..<length {
-            let randomIndex = Int(arc4random_uniform(UInt32(letters.count)))
-            let randomChar = letters[randomIndex]
-            password.append(randomChar)
+            password.append(letters.randomElement()!)
         }
+        return password
     }
 }
