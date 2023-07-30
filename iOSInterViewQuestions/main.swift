@@ -155,10 +155,10 @@ print(upperWordsArray)
 //let numbers = [1, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5]
 //let chars = ["a", "b", "c", "c", "c", "b"]
 //var tempNumbers = [Int]()
-
+//
 //extension Array where Element: Equatable {
 //    guard !self.isEmpty else { return [] }
-    
+//
 //    func removeDuplictes() -> [Element] {
 //        var tempNumbers: [Element] = []
 //        for number in numbers {
@@ -371,19 +371,19 @@ print(object.linearSearch([10, 30, 40, 20, 50, 60], key: 20))
 var numbersArray = [2, 4, 7, 9, 3, 5]
 print(numbersArray.map({$0 + 2}))
 
- //MARK: Reverse an Array
+ //MARK: 35. Reverse an Array
 print(object.reversTheArray("Mekala Vamsi Krishna"))
 print(object.reverseArray(["vamsi", "Rakesh", "Raji", "Mohan"]))
 var array = ["Vamsi", "Raki", "Raji", "Mohan"]
 print(object.reverse(&array))
 
-//MARK: Rotate an Array
+//MARK: 36. Rotate an Array
 print(object.rotateArray([1, 2, 3, 4, 5], byPositions: 2))
 
-//MARK: Rearrange an Array
+//MARK: 37. Rearrange an Array
 print(object.rearrangeArray([1, 2, 3, 4, 5, 6], fromIndex: 0, toIndex: 5))
 
- //MARK: Higher Order Functions
+ //MARK: 38. Higher Order Functions
 
  //MARK: Map
 
@@ -413,5 +413,13 @@ let newReduceArray = reduceNumbers.reduce(0, {
 })
 print(newReduceArray)
 
-//MARK: Generate Password
+//MARK: 39. Generate Password
 print(object.generatePassword(length: 8))
+
+//MARK: 40. Checking Anagrams
+print(object.areAnagrams(str1: "listen", str2: "silent"))
+print(object.areAnagrams(str1: "Debit Card", str2: "Bad Credit"))
+print(object.areAnagrams(str1: "hello", str2: "world"))
+
+//MARK: 41. Fibonacci Series
+print(object.fibonacciSeries(upto: 10))
