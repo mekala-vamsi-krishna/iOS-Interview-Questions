@@ -302,4 +302,40 @@ class Problems {
         }
         return password
     }
+    
+    func areAnagrams(str1: String, str2: String) -> Bool {
+        let cleanedStr1 = str1.lowercased().replacingOccurrences(of: " ", with: "")
+        let cleanedStr2 = str2.lowercased().replacingOccurrences(of: " ", with: "")
+        
+        guard str1.count == str2.count else {
+            return false
+        }
+        
+        let charArray1 = Array(cleanedStr1)
+        let charArray2 = Array(cleanedStr2)
+        
+        let sortedArray1 = charArray1.sorted()
+        let sortedArray2 = charArray2.sorted()
+        
+        return sortedArray1 == sortedArray2
+    }
+    
+    func fibonacciSeries(upto number: Int) -> [Int] {
+        var series = [Int]()
+        
+        if number <= 0 {
+            return series
+        } else if number == 1 {
+            series.append(0)
+        } else if number == 1{
+            series = [0, 1]
+        } else {
+            series = [0, 1]
+            for i in 2 ..< number - 1 {
+                let nextNumber = series[i - 1] + series[i - 2]
+                series.append(nextNumber)
+            }
+        }
+        return series
+    }
 }
