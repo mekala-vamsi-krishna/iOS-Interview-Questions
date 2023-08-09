@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15166A8729CF44420070B1EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15166A8629CF44420070B1EA /* main.swift */; };
+		AC4F446D2A82B6B0005F04AB /* FAANG.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4F446C2A82B6B0005F04AB /* FAANG.swift */; };
 		ACFE8CE22A479EE9006F5166 /* Problems.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE8CE12A479EE9006F5166 /* Problems.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		15166A8329CF44420070B1EA /* iOSInterViewQuestions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iOSInterViewQuestions; sourceTree = BUILT_PRODUCTS_DIR; };
 		15166A8629CF44420070B1EA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AC4F446C2A82B6B0005F04AB /* FAANG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAANG.swift; sourceTree = "<group>"; };
 		ACFE8CE12A479EE9006F5166 /* Problems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Problems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 			children = (
 				15166A8629CF44420070B1EA /* main.swift */,
 				ACFE8CE12A479EE9006F5166 /* Problems.swift */,
+				AC4F446C2A82B6B0005F04AB /* FAANG.swift */,
 			);
 			path = iOSInterViewQuestions;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			files = (
 				ACFE8CE22A479EE9006F5166 /* Problems.swift in Sources */,
 				15166A8729CF44420070B1EA /* main.swift in Sources */,
+				AC4F446D2A82B6B0005F04AB /* FAANG.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -423,3 +423,8 @@ print(object.areAnagrams(str1: "hello", str2: "world"))
 
 //MARK: 41. Fibonacci Series
 print(object.fibonacciSeries(upto: 10))
+
+// MARK: 42. Three Largest numbers in array(Acending Order)
+
+let faang = FAANG()
+print(faang.threeLargestNumbers(array: [1, 2, 4, 5, 8, 9, 12, 24]))
