@@ -425,6 +425,14 @@ print(object.areAnagrams(str1: "hello", str2: "world"))
 print(object.fibonacciSeries(upto: 10))
 
 // MARK: 42. Three Largest numbers in array(Acending Order)
-
 let faang = FAANG()
 print(faang.threeLargestNumbers(array: [1, 2, 4, 5, 8, 9, 12, 24]))
+
+// MARK: finidng the indices of the added values equal to target
+print(object.twoSum([2, 7, 8, 5, 8], 9))
+
+// MARK: Finding the meridian of two arrays
+print(object.findMedianSortedArrays([1, 2], [3, 4]))
+
+// MARK: Finding the square of the largest number
+print(object.maxArea([1,8,6,2,5,4,8,3,7]))

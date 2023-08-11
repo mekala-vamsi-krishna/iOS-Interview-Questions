@@ -338,4 +338,67 @@ class Problems {
         }
         return series
     }
+    
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var outputArray = [Int]()
+        
+        for i in 0..<nums.count {
+            for j in (i + 1)..<nums.count {
+                if nums[i] + nums[j] == target {
+                    outputArray.append(i)
+                    outputArray.append(j)
+                }
+            }
+        }
+        
+        return outputArray
+    }
+    
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        var subStringArray = [Character]()
+        for char in s {
+            if !subStringArray.contains(char) {
+                subStringArray.append(char)
+            }
+        }
+        return subStringArray.count
+    }
+
+    func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
+        var newArray = [Int]()
+        
+        for i in nums1 {
+            newArray.append(i)
+        }
+        
+        for j in nums2 {
+            newArray.append(j)
+        }
+        
+        let sortedArray = newArray.sorted()
+        
+        if sortedArray.count % 2 == 0 {
+            let middleLeftIndex = (sortedArray.count - 1) / 2
+            let middleRightIndex = sortedArray.count / 2
+            let middleValue = Double(sortedArray[middleLeftIndex] + sortedArray[middleRightIndex]) / 2.0
+            return middleValue
+        } else {
+            let middleIndex = sortedArray.count / 2
+            return Double(sortedArray[middleIndex])
+        }
+    }
+    
+    func maxArea(_ height: [Int]) -> Int {
+        guard !height.isEmpty else { return 0 }
+        
+        var largestNumber = height[0]
+        
+        for i in height {
+            if i > largestNumber {
+                largestNumber = i
+            }
+        }
+        
+        return largestNumber * largestNumber
+    }
 }
